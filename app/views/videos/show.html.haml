@@ -1,0 +1,11 @@
+%h2 Video
+%ul
+  %h4
+    = "#{@video.id}. ‘#{@video.title}’"
+  %h5
+    = "by #{@video.artist}"
+  %h5
+    = "year: #{@video.year}"
+  %br
+  
+= link_to 'Home', videos_path
