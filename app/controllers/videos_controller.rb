@@ -25,8 +25,10 @@ class VideosController < ApplicationController
     @video = Video.find(params[:id])
 	end
 
-  def delete
-    
+  def destroy
+    debugger
+    Student.find(params[:id]).destroy
+    redirect_to "/videos"
   end
 
 	private
