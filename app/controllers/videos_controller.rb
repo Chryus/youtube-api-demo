@@ -24,7 +24,9 @@ class VideosController < ApplicationController
 	def edit
     @video = Video.find(params[:id])
 	end
-	
+
+  def delete
+  end
 
 	private
     # Use callbacks to share common setup or constraints between actions.

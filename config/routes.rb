@@ -6,7 +6,7 @@ YoutubeApiDemo::Application.routes.draw do
   post '/videos' => 'videos#create'
   get '/videos/:id/edit' => 'videos#edit'
   put '/videos/:id' => 'videos#update'
-  delete 'videos/:id' => 'videos#destroy'
+  delete 'videos/:id' => 'videos#delete'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
