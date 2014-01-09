@@ -26,6 +26,7 @@ class VideosController < ApplicationController
 	end
 
   def delete
+    
   end
 
 	private
