@@ -1,5 +1,16 @@
 %h1 Edit video
 
-= render 'form'
+= form_for @video, url: "/videos/#{@video.id}", method: :put do |f|
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :artist
+    = f.text_field :artist
+  .field
+    = f.label :year
+    = f.number_field :year
+  .actions
+    = f.submit 'Save'
 
-= link_to 'Home', videos_path
+= link_to 'Home', "/videos"

@@ -21,14 +21,23 @@ class VideosController < ApplicationController
 		end
 	end
 
+  def update
+    @video = Video.find(params[:id])
+    if @video.update_attributes(video_params)
+      redirect_to "/videos"
+    else
+      render 'edit'
+    end
+  end
+
 	def edit
     @video = Video.find(params[:id])
 	end
 
   def destroy
+    Video.find(params[:id]).destroy
     debugger
-    Student.find(params[:id]).destroy
-    redirect_to "/videos"
+    redirect_to :action => 'index'
   end
 
 	private
