@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140109155238) do
+ActiveRecord::Schema.define(version: 20140110004456) do
+
+  create_table "artists", force: true do |t|
+    t.string  "name"
+    t.string  "genre"
+    t.integer "year"
+  end
 
   create_table "videos", force: true do |t|
     t.string  "title"
     t.string  "artist"
     t.integer "year"
+    t.string  "artist_id"
   end
 
 end
